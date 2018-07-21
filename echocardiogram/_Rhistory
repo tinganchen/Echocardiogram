@@ -1,0 +1,162 @@
+heart <- read.table("data\\echocardiogram.data.txt")
+heart
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")
+?read.table
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",", strip.white = T)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = "", strip.white = T)
+heart
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",", strip.white = T)
+heart
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")
+heart
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",", na.strings = "NA")
+heart
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")
+is.na(heart)
+if(heart == "?") heart = NA
+if(heart == "?") heart == NA
+heart == "?"
+which(heart == "?")
+ifelse(heart == "?", NA, heart)
+heart
+heart[heart == "?"]
+heart[heart == "?"] == NA
+heart[heart == "?"] <- NA
+heart
+is.na(heart)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))]
+heart
+heart[heart == "?"] <- NA
+colnames(heart)
+colnames(heart) <- c("survival", "still.alive",
+"age.at.heart.attack",
+"pericardial.effusion",
+"fractional.shortening",
+"epss", "lvdd",
+"wall.motion.index", "alive-at-1")
+heart
+# Input data, which line 8,10,11,12 are ignored
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))]
+# Variables' name
+colnames(heart) <- c("survival", "still.alive",
+"age.at.heart.attack",
+"pericardial.effusion",
+"fractional.shortening",
+"epss", "lvdd",
+"wall.motion.index", "alive-at-1")
+# Replace ? with NA
+heart[heart == "?"] <- NA
+dim(heart)
+str(heart)
+colnames(heart) <- c("survival", "still.alive",
+"age.at.heart.attack",
+"pericardial.effusion",
+"fractional.shortening",
+"epss", "lvdd",
+"wall.motion.index", "alive.at.1")
+heart[heart == "?"] <- NA
+dim(heart)
+str(heart)
+head(heart)
+dim(heart)
+str(heart)
+head(heart)
+num.heart <- as.numeric(heart)
+heart
+heart <- as.numeric(read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))])
+num.heart <- as.numeric(as.data.frame(heart))
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",",
+stringsAsFactors = default.stringsAsFactors())[, c(-8, -(10:12))]
+str(heart)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",",
+stringsAsFactors = F)[, c(-8, -(10:12))]
+str(heart)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",",
+stringsAsFactors = T)[, c(-8, -(10:12))]
+str(heart)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))]
+num.heart <- as.numeric(unlist(heart))
+num.heart
+class(heart)
+num.heart <- as.numeric(heart)
+lapply(heart, as.numeric)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))]
+heart
+lapply(heart, as.numeric)
+num.heart <- apply(heart, 2, as.numeric)
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))]
+num.heart <- apply(heart, 2, as.numeric)
+heart[heart == "?"] <- NA
+dim(heart)
+str(heart)
+head(heart)
+num.heart <- apply(heart, 2, as.numeric)
+num.heart
+class(heart)
+class(num.heart)
+str(num.heart)
+num.heart <- as.data.frame(apply(heart, 2, as.numeric))
+str(num.heart)
+num.heart
+heart <- read.table("data\\echocardiogram.data.txt",
+sep = ",")[, c(-8, -(10:12))]
+colnames(heart) <- c("survival", "still.alive",
+"age.at.heart.attack",
+"pericardial.effusion",
+"fractional.shortening",
+"epss", "lvdd",
+"wall.motion.index", "alive.at.1")
+heart[heart == "?"] <- NA
+dim(heart)
+str(heart)
+head(heart)
+num.heart <- as.data.frame(apply(heart, 2, as.numeric))
+str(num.heart)
+table(num.heart[ , 9])
+?table
+table(num.heart[ , 9], useNA = c("no", "ifany", "always"))
+table(num.heart[ , 9], useNA = "ifany")
+table(num.heart[ , c(1, 9)])
+table(num.heart[ , c(1, 9)], useNA = "ifany")
+table(num.heart[ , c(1, 2, 9)], useNA = "ifany")
+which(num.heart[ , 1]==NA)
+which(num.heart[ , 1]=NA)
+num.heart[ , 1]==NA
+num.heart[ , 1]
+head(heart)
+which(num.heart[ , 9] >= 12)
+num.heart[ , 9] >= 12
+which(num.heart[ , 1] >= 12)
+num.heart[which(num.heart[ , 1] >= 12) , 9]
+num.heart[which(num.heart[ , 1] >= 12 &
+num.heart[ , 2] == 0) , 9]
+num.heart[which(num.heart[ , 1] >= 12 &
+num.heart[ , 2] == 1) , 9]
+num.heart[1:2, which(num.heart[ , 9] == 1)]
+num.heart[ , 9] == 1
+which(num.heart[ , 9] == 1)
+num.heart[which(num.heart[ , 9] == 1), 1:2]
+num.heart[which(num.heart[ , 1] >= 12 &
+num.heart[ , 2] == 1) , 9]
+num.heart[which(num.heart[ , 1] >= 12 &
+num.heart[ , 2] == 0) , 9]
+num.heart[which(num.heart[ , 1] < 12 &
+num.heart[ , 2] == 0) , 9]
+num.heart[which(num.heart[ , 1] < 12 &
+num.heart[ , 2] == 1) , 9]
