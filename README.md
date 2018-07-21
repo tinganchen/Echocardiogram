@@ -1,2 +1,0 @@
-# Echocardiogram
-Senior Project
